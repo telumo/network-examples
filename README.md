@@ -103,3 +103,29 @@ cargo build
 # 実行
 cargo run
 ```
+
+## 問題
+
+***数字をて足す***
+
+- `numbers.txt`ファイルから数字を取得する
+numbers.txt
+```txt
+1
+2
+```
+- 全ての数字の和を求める
+
+- `numbers.txt`に追記する
+```txt
+1
+2
+3
+```
+
+
+
+
+
+
+

@@ -1,5 +1,17 @@
 # network-examples
 
+## 知識
+
+### ネットワーク
+
+- [パケット \- Wikipedia](https://ja.wikipedia.org/wiki/%E3%83%91%E3%82%B1%E3%83%83%E3%83%88)
+
+### Rust
+
+- [Rust公式](https://www.rust-lang.org/)
+
+## その他
+
 ### 実行方法
 
 ソースコードのクローン
@@ -64,8 +76,10 @@ git push --set-upstream origin <name>
 # インストール
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-# update
+# アクティベート
+source ~/.cargo/env
 
+# update
 rustup update
 
 ```

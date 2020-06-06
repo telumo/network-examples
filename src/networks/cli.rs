@@ -39,13 +39,11 @@ fn build_cli() -> App<'static, 'static> {
         .setting(AppSettings::DeriveDisplayOrder)
         .arg(
             Arg::from_usage("-p --protocol <PROTOCOL> 'protocol'")
-                .possible_values(&["Udp", "Tcp"])
-                .default_value("Udp"),
+                .possible_values(&["udp", "tcp"])
         )
         .arg(
             Arg::from_usage("-r --role <ROLE> 'role : server/client'")
                 .possible_values(&["server", "client"])
-                .default_value("server"),
         )
         .arg(Arg::from_usage("-a --address <ADDRESS> 'address'").validator(valid_address_format))
 }

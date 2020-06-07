@@ -1,3 +1,7 @@
+mod networks;
+
+use networks::run;
+
 fn main() {
-    println!("Hello, world!");
+    run();
 }

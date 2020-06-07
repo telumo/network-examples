@@ -22,6 +22,19 @@ Rustでネットワークのパケットキャプチャ・解析・制御等を�
 
 ### 実行方法
 
+ビルド
+```sh
+cargo build --release
+```
+
+実行
+```sh
+./target/release/network-examples --address 127.0.0.1:3333 --protocol tcp --role server
+```
+
+
+### 実行方法（初回）
+
 ソースコードのクローン
 ```sh
 # クローン

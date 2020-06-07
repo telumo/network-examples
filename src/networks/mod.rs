@@ -1,6 +1,6 @@
 use std::env;
 
-use log::{info};
+use log::{info, error};
 use types::*;
 
 mod cli;
@@ -8,7 +8,7 @@ mod tcp_client;
 mod tcp_server;
 pub mod types;
 mod udp_client;
-mod udp_server;
+pub mod udp_server;
 
 pub fn run() {
     // 環境変数を設定
@@ -23,7 +23,8 @@ pub fn run() {
                 info!("Switch to TCP Client")
             }
             Role::Server => {
-                info!("Switch to TCP Server")
+                info!("Switch to TCP Server");
+                tcp_server::serve(&arguments.address).unwrap_or_else(|e| error!("{}", e));
             }
         },
         Protocol::Udp => match arguments.role {

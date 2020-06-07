@@ -1,5 +1,25 @@
 # network-examples
 
+Rustでネットワークのパケットキャプチャ・解析・制御等を実装するための勉強用レポジトリです。
+
+## 目標
+
+- [ ] パケットキャプチャ
+- [ ] フロー解析 / 特徴抽出（保存）
+- [ ] 特定のアクセス制御
+
+## 知識
+
+### ネットワーク
+
+- [パケット \- Wikipedia](https://ja.wikipedia.org/wiki/%E3%83%91%E3%82%B1%E3%83%83%E3%83%88)
+
+### Rust
+
+- [Rust公式](https://www.rust-lang.org/)
+
+## その他
+
 ### 実行方法
 
 ビルド
@@ -77,8 +97,10 @@ git push --set-upstream origin <name>
 # インストール
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-# update
+# アクティベート
+source ~/.cargo/env
 
+# update
 rustup update
 
 ```
@@ -94,3 +116,29 @@ cargo build
 # 実行
 cargo run
 ```
+
+## 問題
+
+***数字をて足す***
+
+- `numbers.txt`ファイルから数字を取得する
+numbers.txt
+```txt
+1
+2
+```
+- 全ての数字の和を求める
+
+- `numbers.txt`に追記する
+```txt
+1
+2
+3
+```
+
+
+
+
+
+
+

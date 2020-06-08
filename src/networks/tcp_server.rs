@@ -32,6 +32,7 @@ fn handler(mut stream: TcpStream) -> Result<(), failure::Error> {
 
     debug!("Handling data from {}", stream.peer_addr()?);
 
+    // TODO: なぜ1024?
     let mut buffer = [0u8; 1024];
 
     loop {

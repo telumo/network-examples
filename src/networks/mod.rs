@@ -5,7 +5,7 @@ use types::*;
 
 mod cli;
 mod tcp_client;
-mod tcp_server;
+pub mod tcp_server;
 pub mod types;
 mod udp_client;
 pub mod udp_server;
@@ -20,7 +20,8 @@ pub fn run() {
     match arguments.protocol {
         Protocol::Tcp => match arguments.role {
             Role::Client => {
-                info!("Switch to TCP Client")
+                info!("Switch to TCP Client");
+                tcp_client::connect(&arguments.address).unwrap_or_else(|e| error!("{}", e));
             }
             Role::Server => {
                 info!("Switch to TCP Server");

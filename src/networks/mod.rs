@@ -31,6 +31,7 @@ pub fn run() {
         Protocol::Udp => match arguments.role {
             Role::Client => {
                 info!("Switch to UDP Client");
+                udp_client::communicate(&arguments.address).unwrap_or_else(|e| error!("{}", e));
             }
             Role::Server => {
                 info!("Switch to TCP Server");

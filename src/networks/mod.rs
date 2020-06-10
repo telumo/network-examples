@@ -30,10 +30,11 @@ pub fn run() {
         },
         Protocol::Udp => match arguments.role {
             Role::Client => {
-                info!("Switch to UDP Client")
+                info!("Switch to UDP Client");
             }
             Role::Server => {
-                info!("Switch to TCP Server")
+                info!("Switch to TCP Server");
+                udp_server::serve(&arguments.address).unwrap_or_else(|e| error!("{}", e));
             }
         },
     }

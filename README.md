@@ -1,5 +1,7 @@
 # network-examples
 
+![Rust](https://github.com/telumo/network-examples/workflows/Rust/badge.svg)
+
 Rustでネットワークのパケットキャプチャ・解析・制御等を実装するための勉強用レポジトリです。
 
 ## 目標
